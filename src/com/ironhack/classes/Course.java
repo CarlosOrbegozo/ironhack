@@ -37,11 +37,21 @@ public class Course {
         this.studentCount = studentCount;
     }
 
-    public String getTitle() {
+    private String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "classId=" + classId +
+                ", capacity=" + capacity +
+                ", studentCount=" + studentCount +
+                ", title='" + title + '\'' +
+                '}';
     }
 }

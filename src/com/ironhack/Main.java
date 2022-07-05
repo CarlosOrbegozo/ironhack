@@ -43,7 +43,7 @@ public class Main {
 //        fileWriter.close();
 //        processCSVFile("oscar_age_female.csv");
         Course course = new Course(1,10,30,"Ironhack");
-        System.out.println();
+        System.out.println(course.toString());
 
 
     }
