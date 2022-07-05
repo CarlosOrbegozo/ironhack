@@ -1,5 +1,7 @@
 package com.ironhack;
 
+import com.ironhack.classes.Course;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -39,7 +41,10 @@ public class Main {
 //        fileWriter.write("fsdfdsfsfs\n");
 //        fileWriter.write("ewrewrewr\n");
 //        fileWriter.close();
-        processCSVFile("oscar_age_female.csv");
+//        processCSVFile("oscar_age_female.csv");
+        Course course = new Course(1,10,30,"Ironhack");
+        System.out.println();
+
 
     }
 
