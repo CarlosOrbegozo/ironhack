@@ -1,0 +1,10 @@
+# Java related
+target/**
+*.jar
+*.war
+*.ear
+*.class
+
+# External tool builders
+.externalToolBuilders/
+/target/
