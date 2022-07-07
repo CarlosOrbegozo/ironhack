@@ -1,4 +1,4 @@
-package com.ironhack.classes;
+package com.ironhack.classes.courses;
 
 public class Course {
     private int classId;

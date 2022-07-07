@@ -1,13 +1,12 @@
 package com.ironhack;
 
-import com.ironhack.classes.Course;
+import com.ironhack.classes.cat.Cat;
+import com.ironhack.classes.courses.Course;
+import com.ironhack.classes.pet.Pet;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -42,8 +41,13 @@ public class Main {
 //        fileWriter.write("ewrewrewr\n");
 //        fileWriter.close();
 //        processCSVFile("oscar_age_female.csv");
-        Course course = new Course(1,10,30,"Ironhack");
-        System.out.println(course.toString());
+//        Course course = new Course(1,10,30,"Ironhack");
+//        System.out.println(course);
+
+        Cat animal ;
+        animal = new Cat("Robin");
+        animal.makeAnAdorableSound();
+
 
 
     }
