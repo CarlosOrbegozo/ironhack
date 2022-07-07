@@ -36,6 +36,16 @@ public class Money {
         return this.amount;
     }
 
+    public BigDecimal decreaseAmount(Money money) {
+        setAmount(this.amount.subtract(money.amount));
+        return this.amount;
+    }
+
+    public BigDecimal decreaseAmount(BigDecimal money) {
+        setAmount(this.amount.subtract(amount));
+        return this.amount;
+    }
+
 
     public Currency getCurrency() {
         return currency;
@@ -47,5 +57,10 @@ public class Money {
 
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return getAmount() + "" + getCurrency().getSymbol();
     }
 }
