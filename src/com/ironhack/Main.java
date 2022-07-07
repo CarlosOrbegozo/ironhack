@@ -7,6 +7,8 @@ import com.ironhack.classes.pet.Pet;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -48,8 +50,43 @@ public class Main {
         animal = new Cat("Robin");
         animal.makeAnAdorableSound();
 
+        double taskEarning = 0.7;
+        double taskFee = 0.1;
+
+        int averageTaskByDayAndClient = 400;
+        int averageClientByDay = 20000;
+
+        System.out.println(new BigDecimal((taskEarning+taskFee)*averageTaskByDayAndClient*averageClientByDay *365));
+        //320e por cliente y dia
+        // 6,400,000 por dia
+        // 2,099,200,000
+
+        BigDecimal a = BigDecimal.valueOf(10);
+        BigDecimal b = BigDecimal.valueOf(2);
+        BigDecimal c = a.add(b);
+        System.out.println(c);
+        BigDecimal d = a.subtract(b);
+        System.out.println(d);
+        BigDecimal e = a.divide(b,4,RoundingMode.DOWN);
+        System.out.println(e);
+        BigDecimal f = a.multiply(b);
+        System.out.println(f);
+        BigDecimal g = a.remainder(b);
+        System.out.println(g);
+
+        System.out.println(operateFormulae(BigDecimal.valueOf(4)));
 
 
+
+    }
+
+    public static BigDecimal operateFormulae(BigDecimal x) {
+        //(2.3 * x + 1.5) / (x - 0.8).
+        BigDecimal part1 =BigDecimal.valueOf(2.3).multiply(x);
+        BigDecimal part2 = part1.add(BigDecimal.valueOf(1.5));
+        BigDecimal part3 = x.subtract(BigDecimal.valueOf(0.8));
+        return part2.divide(part3,4, RoundingMode.DOWN);
+        //return (BigDecimal.valueOf(2.3).multiply(x).add(BigDecimal.valueOf(1.5).divide((x.subtract(BigDecimal.valueOf(0.8))),4, RoundingMode.DOWN));
     }
 
     public static void processCSVFile(String path) throws IOException {
